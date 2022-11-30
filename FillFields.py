@@ -13,7 +13,7 @@ class FillFields:
         person = PersonData().get_data()
 
         # chosen forms from Field Input -> menu()
-        chosen_forms = FieldInput.chosen_forms  
+        # chosen_forms = FieldInput.chosen_forms
 
         # crate dictionary with all needed data
         all_data = dict()

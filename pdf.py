@@ -10,24 +10,6 @@ from PyPDF2 import PdfFileWriter, PdfFileReader
 # # chosen forms
 # chosen_forms = FieldInput.chosen_forms
 
-
-db = {
-'dopr': {'page1':
-            {'doc_place': [0, 1], 'doc_h1': [0, 1], 'doc_h2': [0, 2], 'doc_hm1': [2, 0], 'doc_hm2': [0, 0],
-             'name': [0, 0],'surname': [0, 0]
-             }},
-'dopr2': {'page1':
-            {'doc_place': [0, 2], 'doc_h1': [0, 2], 'doc_h2': [0, 0], 'doc_hm1': [0, 0], 'doc_hm2': [0, 0],
-             'name': [0, 0],'surname': [0, 0]
-             }},
-'gowno': {'gowno': 'klop'}
-}
-
-chosen_forms2 = ['dopr', 'gowno']  ## Chosen forms
-# database = [dopr, dopr2, gowno]  ## database of field places
-data = {'name': 'Jurek'} ## collected data
-
-
 class FileHandler:
 
     def __init__(self):

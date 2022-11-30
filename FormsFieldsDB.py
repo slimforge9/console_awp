@@ -21,6 +21,7 @@ def get_form_positions(form_name):
     # iteration trough pages in form
     for i in range(num_pages(form_name)):
         # iteration trough items in pages form
+        print(f"strona{i}")
         for k, v in db[form_name][f'page{i}'].items():
             yield k, v
 
@@ -38,10 +39,3 @@ try:
 
 except StopIteration:
     print('Done')
-
-
-
-# print(db['detain']['page1'].keys())
-# string = lambda i: f"page{i}"
-# for i in range(2):
-#     print(string(i+1))
