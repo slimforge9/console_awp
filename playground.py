@@ -47,11 +47,12 @@ def set_form_positions(form_name, collected_data_dict):
     while True:
         try:
             page, key, value_xy = next(line)
-            print(page, key, value_xy)
 
         except StopIteration:
             break
 
+        # dalsze dzialania
+        print(page, key, value_xy)
 
 
 set_form_positions('detain', 1)
@@ -59,19 +60,24 @@ set_form_positions('detain', 1)
 #
 #
 #
-# # pdf.set_xy(380, 84)
-# # pdf.cell(50, 15, txt='dupa', border=0)
-#
-# pdf.output(overlay_pdf_file_name)
-#
-# pdf_template = PdfFileReader(open(pdf_template_file_name, 'rb'))
-# # Get the first page from the template
-# template_page = pdf_template.getPage(0)
-# # Open your overlay PDF that was created earlier
-# overlay_pdf = PdfFileReader(open(overlay_pdf_file_name, 'rb'))
-# # Merge the overlay page onto the template page
-# template_page.mergePage(overlay_pdf.getPage(0))
-# # Write the result to a new PDF file
-# output_pdf = PdfFileWriter()
-# output_pdf.addPage(template_page)
-# output_pdf.write(open(result_pdf_file_name, "wb"))
+pdf.add_page()
+pdf.set_xy(130, 280)
+pdf.cell(50, 15, txt='pAULINA kNISKY', border=0)
+pdf.set_xy(360, 280)
+pdf.cell(50, 15, txt='Krystian', border=0)
+pdf.set_xy(360, 315)
+pdf.cell(50, 15, txt='99021106008', border=0)
+
+pdf.output(overlay_pdf_file_name)
+
+pdf_template = PdfFileReader(open(pdf_template_file_name, 'rb'))
+# Get the first page from the template
+template_page = pdf_template.getPage(0)
+# Open your overlay PDF that was created earlier
+overlay_pdf = PdfFileReader(open(overlay_pdf_file_name, 'rb'))
+# Merge the overlay page onto the template page
+template_page.mergePage(overlay_pdf.getPage(0))
+# Write the result to a new PDF file
+output_pdf = PdfFileWriter()
+output_pdf.addPage(template_page)
+output_pdf.write(open(result_pdf_file_name, "wb"))
