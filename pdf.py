@@ -21,7 +21,7 @@ class FileHandler:
         for form in chosen_forms:
             in_page1 = (next(item for item in database[form]))  # CZARNA MAGIA
             # print(key)
-            print(database[form][in_page1])
+            # ---------- print(database[form][in_page1])
             # for field_name, value in enumerate(database[form][key]):
             #     # print(database[form][key][value])
             #     print(field_name)

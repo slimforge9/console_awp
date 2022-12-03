@@ -1,18 +1,21 @@
 from fpdf import FPDF
 from PyPDF2 import PdfFileWriter, PdfFileReader
+import main
+from FieldInput import FieldInput
 
 
 # database of fields coordinates to fill in chosen forms
 db = {'detain': {'page0':
-                      {'name': [0, 0],
+                      {'name': [1, 2],
                        'surname': [10, 10]},
                  'page1':
                       {'p_end_h': [20, 20],
                        'p_end_date': [30, 40]}
                  },
       'warrant': {'page0':
-                      {'name': [1, 1],
-                       'surname': [2, 2]}}
+                      {'name': [130, 280],
+                       'surname': [360, 280],
+                       'p_no': [360, 315]}}
       }
 
 
@@ -22,7 +25,6 @@ result_pdf_file_name = 'output/warrant.pdf'
 
 
 pdf = FPDF(format='letter', unit='pt')
-
 pdf_style = ''
 pdf.add_font('DejaVu', fname='fonts/DejaVuSansCondensed.ttf')
 pdf.set_font('DejaVu', size=11)
@@ -37,36 +39,50 @@ def get_form_positions(form_name):
     for i in range(num_pages(form_name)):
         # iteration trough items in pages form
         page = i
-        print(f"strona{i}")
+        # print(f"strona{i}")
         for k, v in db[form_name][f'page{i}'].items():
             yield page, k, v
 
 
+# collected data for function under
+collected_data = main.start
+
+
 def set_form_positions(form_name, collected_data_dict):
+    def get_key_value_from_dict():
+        for dict_key, dict_value in collected_data_dict.items():
+            yield dict_key, dict_value
+
+    # set
     line = iter(get_form_positions(form_name))
-    while True:
-        try:
-            page, key, value_xy = next(line)
+    pages_amount = num_pages(form_name)
 
-        except StopIteration:
-            break
+    for pages in range(pages_amount):
 
-        # dalsze dzialania
-        print(page, key, value_xy)
+        pdf.add_page()
+
+        while True:
+            try:
+                page, key, value_xy = next(line)
+
+            except StopIteration:
+                break
+            pdf.set_xy(value_xy[0], value_xy[1])
+            pdf.cell(50, 15, txt=collected_data_dict[key], border=0)
 
 
-set_form_positions('detain', 1)
+# data needed for function under
+chosen_forms = FieldInput.chosen_forms
 
-#
-#
-#
-pdf.add_page()
-pdf.set_xy(130, 280)
-pdf.cell(50, 15, txt='pAULINA kNISKY', border=0)
-pdf.set_xy(360, 280)
-pdf.cell(50, 15, txt='Krystian', border=0)
-pdf.set_xy(360, 315)
-pdf.cell(50, 15, txt='99021106008', border=0)
+def manage_forms_with_data(forms_list):
+    for form in forms_list:
+        set_form_positions(f'{form}', collected_data)
+
+##### TEST
+manage_forms_with_data(chosen_forms)
+
+
+##### REST TO HANDLE
 
 pdf.output(overlay_pdf_file_name)
 
