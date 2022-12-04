@@ -26,9 +26,5 @@ class FormsDB:
 
         return self.no_repeat
 
-    # def dict_of_fields_list(self):
-    #     #  zmienilem no_repeat na self.no_repeat w funkcji wyzej
-    #     dict_of_fields =  {str(form): form for form in self.no_repeat}
-    #     return dict_of_fields
 
 
