@@ -2,7 +2,7 @@ from FieldInput import FieldInput
 from PersonData import PersonData
 
 
-class FillFields:
+class GetData:
     # takes person data and fills the fields in every chosen form + asks for data that wasn't input before
 
     def fill_fields(self):

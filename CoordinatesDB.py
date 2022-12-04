@@ -9,4 +9,8 @@ fields_db = {'detain': {'page0':
       'warrant': {'page0':
                       {'name': [130, 280],
                        'surname': [200, 280],
-                       'p_no': [360, 315]}}} #                        'dad_name': [360, 280],
+                       'p_no': [360, 315]},
+             'page1':
+                 {'name': [130, 280],
+                  'surname': [200, 280],
+                  'p_no': [360, 315]}}}

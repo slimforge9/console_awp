@@ -1,9 +1,9 @@
-from FillFields import FillFields
+from GetData import GetData
 from FillForm import FillForm
-from FormsFieldsDB import fields_db
+from CoordinatesDB import fields_db
 
-# collected data
-collected_data = FillFields().fill_fields()
+# starts menu, collecting needed data -> person data, forms list
+collected_data = GetData().fill_fields()
 
 # creates overlay_pdf of chosen form -> 'warrant'
 form = FillForm('warrant', fields_db, collected_data)
