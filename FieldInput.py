@@ -1,5 +1,5 @@
 from Menu import Menu
-from FieldsDB import FormsDB
+from FormsDB import FormsDB
 
 
 class FieldInput:
@@ -16,3 +16,6 @@ class FieldInput:
 
     def give_list(self):
         return FieldInput.flattened_fields_list
+
+    def get_forms_list(self):
+        return self.chosen_forms

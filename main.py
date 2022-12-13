@@ -1,11 +1,22 @@
-from GetData import GetData
-from FillForm import FillForm
+from FillFields import FillFields
+from FieldInput import FieldInput
 from CoordinatesDB import fields_db
 
-# starts menu, collecting needed data -> person data, forms list
-collected_data = GetData().fill_fields()
+from FillForm import FillForm
 
-# creates overlay_pdf of chosen form -> 'warrant'
-form = FillForm('warrant', fields_db, collected_data)
-form.set_form_positions()
+# chosen forms from menu
+chosen_forms = FieldInput.chosen_forms
 
+# collected data in chosen forms
+collected_data = FillFields().fill_fields()
+
+try:
+# fill forms
+    for form in chosen_forms:
+        FillForm(f'{form}', fields_db, collected_data).set_form_positions()
+except:
+    print('Nie obsluzyles wszystkich inputow')
+
+
+print(collected_data)
+print(chosen_forms)
