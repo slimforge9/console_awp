@@ -46,9 +46,14 @@ class FillForm:
                 except StopIteration:
                     break
 
-                # sets x,y with text from dictionary by key
-                self.pdf.set_xy(value_xy[0], value_xy[1])
-                self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
+                if key[-1] != '2':
+                    # sets x,y with text from dictionary by key
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
+                else:
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.cell(50, 15, txt=self.collected_data[key[0:-1]], border=0)
+
 
         # save to file with all pages
         self.pdf.output(self.overlay_pdf_file_name)

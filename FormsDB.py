@@ -4,9 +4,10 @@ class FormsDB:
     def __init__(self):
         # Initialization of a dictionary
         self.forms_db = {'detain': ['name', 'surname', 'p_no', 'law_base', 'p_end_h', 'p_end_date'],
-                         'warrant': ['doc_place', 'doc_date', 'doc_hour', 'name', 'surname', 'dad_name', 'p_no',
+                         'warrant': ['doc_place', 'doc_date', 'doc_time', 'name', 'surname', 'dad_name', 'p_no',
                                      'birth_date', 'birth_place', 'supervisor'],
-                         '79': ['doc_place', 'doc_date', 'name']}
+                         '79': ['doc_place', 'doc_date', 'name', 'surname', 'hold_time', 'hold_date',
+                                'officer_name', 'officer_unit']}
 
     def get_fields(self):
         # returns dictionary of needed data
