@@ -29,7 +29,14 @@ fields_db = {'detain':
                          'officer_name': [70, 228],
                          'officer_unit': [340, 228],
                          'name2': [220, 278],
-                         'surname2': [277, 278]
+                         'surname2': [277, 278],
+                         'family_name': [395, 278],
+                         'birth_date': [77, 306],
+                         'address': [175, 349],
+                         'job': [108, 383],
+                         'ID': [317, 419],
+                         'p_no': [380, 454],
+                         '79_basis': [55, 565]
                         }
 
 

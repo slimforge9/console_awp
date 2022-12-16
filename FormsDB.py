@@ -7,7 +7,9 @@ class FormsDB:
                          'warrant': ['doc_place', 'doc_date', 'doc_time', 'name', 'surname', 'dad_name', 'p_no',
                                      'birth_date', 'birth_place', 'supervisor'],
                          '79': ['doc_place', 'doc_date', 'name', 'surname', 'hold_time', 'hold_date',
-                                'officer_name', 'officer_unit']}
+                                'officer_name', 'officer_unit', 'family_name', 'birth_date', 'address',
+                                'job', 'ID', 'p_no', '79_basis'
+                                ]}
 
     def get_fields(self):
         # returns dictionary of needed data

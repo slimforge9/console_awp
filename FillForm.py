@@ -46,10 +46,15 @@ class FillForm:
                 except StopIteration:
                     break
 
-                if key[-1] != '2':
+                if key == '79_basis':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data[key], border=0)
+
+                elif key[-1] != '2':
                     # sets x,y with text from dictionary by key
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
+
                 else:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key[0:-1]], border=0)

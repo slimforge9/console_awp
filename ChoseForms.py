@@ -9,7 +9,7 @@ class ChoseForms:
         chosen_forms = []
 
         while True:
-            option = input("Wybierz opcję: 1 Zatrzymanie, 2. Nakaz, 3. 70, 4. Zatrzymaj\n")
+            option = input("Wybierz opcję: 1 Zatrzymanie, 2. Nakaz, 3. 79, 4. Zatrzymaj\n")
 
             if option == '1':
                 if self.forms_list[0] not in chosen_forms:
