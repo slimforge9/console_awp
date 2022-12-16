@@ -14,9 +14,9 @@ pdf_style = ''
 pdf.add_font('DejaVu', fname='DejaVuSansCondensed.ttf')
 pdf.set_font('DejaVu', size=11)
 
-pdf.set_xy(220, 278)
-pdf.cell(50, 15, txt='Bartłomiej', border=0)
-pdf.set_xy(277, 278)
+pdf.set_xy(90, 163)
+pdf.cell(50, 15, txt='Kuneguda', border=0)
+pdf.set_xy((90+(len('Kuneguda')*7)), 163)
 pdf.cell(50, 15, txt='Macierewicz', border=0)
 pdf.output(overlay_pdf_file_name)
 
