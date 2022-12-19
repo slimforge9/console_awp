@@ -22,3 +22,11 @@ MergePDFs(chosen_forms)
 
 print(collected_data)
 print(chosen_forms)
+
+# import datetime
+#
+# x = datetime.datetime.now()
+#
+# print(x.strftime("%d.%m.%Y"))
+# print(x.strftime("%H:%M"))
+# ZWRACA STRINGI WIEC MOZNA SLICE'OWAC ;)

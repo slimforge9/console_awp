@@ -50,6 +50,10 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(490, 10, txt=self.collected_data[key], border=0)
 
+                if self.form_name == '79' and key == 'doc_date':
+                    self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_city'])*7)), value_xy[1])
+                    self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
+
                 elif key[-1] != '2':
                     # sets x,y with text from dictionary by key
                     self.pdf.set_xy(value_xy[0], value_xy[1])

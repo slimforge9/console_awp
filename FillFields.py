@@ -26,6 +26,8 @@ class FillFields:
         # input data which wasn't input
         for field in fields_list:
             if field not in person_data:
+                if all_data[field] == 'birth_date':
+                    continue
                 all_data[field] = input(f'Podaj {field}\n')
 
         # set input into all needed data dictionary

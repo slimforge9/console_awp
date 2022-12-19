@@ -2,13 +2,13 @@ class FormsDB:
     # Class that stores needed data of every form
 
     def __init__(self):
-        # Initialization of a dictionary
+        # Initialization of a dictionary that contains fields in each form
         self.forms_db = {'detain': ['name', 'surname', 'p_no', 'law_base', 'p_end_h', 'p_end_date'],
-                         'warrant': ['doc_place', 'doc_date', 'doc_time', 'name', 'surname', 'dad_name', 'p_no',
+                         'warrant': ['doc_city', 'doc_date', 'doc_time', 'name', 'surname', 'dad_name', 'p_no',
                                      'birth_date', 'birth_place', 'supervisor'],
-                         '79': ['doc_place', 'doc_date', 'name', 'surname', 'hold_time', 'hold_date',
-                                'officer_name', 'officer_unit', 'family_name', 'birth_date', 'address',
-                                'job', 'ID', 'p_no', '79_basis'
+                         '79': ['doc_city', 'doc_date', 'name', 'surname', 'hold_time', 'hold_date',
+                                'officer_name', 'officer_unit', 'family_name', 'birth_date', 'birth_place', 'dad_name',
+                                'mom_name', 'mom_family', 'address', 'job', 'ID', 'p_no', '79_basis'
                                 ]}
 
     def get_fields(self):
