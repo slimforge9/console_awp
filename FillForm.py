@@ -38,6 +38,8 @@ class FillForm:
             self.line = iter(self.generate_form_positions())
             self.pdf.add_page()
 
+            # this loop place values in right coords, there's alot of "elif" because of customization of every form
+            # which has different place/cell/multi_cell logic
             while True:
                 try:
                     # gets key, value_xy from generator
@@ -50,7 +52,23 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(490, 10, txt=self.collected_data[key], border=0)
 
-                if self.form_name == '79' and key == 'doc_date':
+                elif key == 'act_description':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(280, 10, txt=self.collected_data[key], border=0)
+
+                elif self.form_name == '79' and key == 'doc_date':
+                    self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_city'])*7)), value_xy[1])
+                    self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
+
+                elif self.form_name == 'warrant' and key == 'doc_date':
+                    self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_city'])*7)), value_xy[1])
+                    self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
+
+                elif self.form_name == 'warrant' and key == 'doc_time':
+                    self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_date'])*7)), value_xy[1])
+                    self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
+
+                elif self.form_name == 'rej' and key == 'doc_date':
                     self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_city'])*7)), value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
 

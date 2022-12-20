@@ -16,8 +16,8 @@ fields_db = {'detain':
                        'birth_place': [200, 315],
                        'supervisor': [130, 375],
                        'doc_city': [350, 140],
-                       'doc_date': [445, 140],
-                       'doc_time': [515, 140]}},
+                       'doc_date': [350, 140],  # original 445, 140
+                       'doc_time': [445, 140]}},  # original 515, 140
              '79':
                  {'page0':
                         {'doc_city': [330, 43],
@@ -41,6 +41,19 @@ fields_db = {'detain':
                          'ID': [317, 419],
                          'p_no': [380, 454],
                          '79_basis': [55, 565]
-                        }}
+                        }},
+             'rej': {
+                 'page0': {
+                     'officer_name': [54, 10],
+                     'doc_city': [370, 10],
+                     'doc_date': [370, 10],
+                     'officer_unit': [54, 43],
+                     'officer_id': [54, 80],
+                     'act_time_date': [255, 245],
+                     'act_place': [255, 265],
+                     'act_description': [255, 283]
+
+                 }
+             }
 
              }

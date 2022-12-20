@@ -1,7 +1,3 @@
-import fpdf
-from PyPDF2 import PdfFileWriter, PdfFileReader
-
-
 from FillFields import FillFields
 from FieldInput import FieldInput
 

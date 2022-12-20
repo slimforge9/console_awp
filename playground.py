@@ -3,7 +3,7 @@ from PyPDF2 import PdfFileWriter, PdfFileReader
 
 
 overlay_pdf_file_name = 'temp/overlay_PDF.pdf'
-pdf_template_file_name = 'forms/79.pdf'
+pdf_template_file_name = 'forms/rej.pdf'
 result_pdf_file_name = 'output/final_PDF.pdf'
 
 # This section creates a PDF containing the information you want to enter in the fields
@@ -14,10 +14,10 @@ pdf_style = ''
 pdf.add_font('DejaVu', fname='DejaVuSansCondensed.ttf')
 pdf.set_font('DejaVu', size=11)
 
-pdf.set_xy(410, 306)
-pdf.cell(50, 15, txt='12.07.2022', border=0)
-pdf.set_xy((90+(len('Kuneguda')*7)), 163)
-pdf.cell(50, 15, txt='Macierewicz', border=0)
+pdf.set_xy(54, 10)
+pdf.cell(50, 15, txt='sierż. szt. Bartłomiej Krupiński', border=0)
+pdf.set_xy(255, 283)
+pdf.multi_cell(280, 10, txt='Gliwice', border=1)
 pdf.output(overlay_pdf_file_name)
 
 

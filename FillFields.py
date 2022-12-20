@@ -1,9 +1,17 @@
 from FieldInput import FieldInput
 from PersonData import PersonData
 
+import datetime
+
+
+
 
 class FillFields:
     # takes person data and fills the fields in every chosen form + asks for data that wasn't input before
+
+    time = datetime.datetime.now()
+    date = time.strftime("%d.%m.%Y"+' r.')
+    hour_minute = time.strftime("%H:%M")
 
     def fill_fields(self):
         # list of fields needed to be filled
@@ -28,7 +36,12 @@ class FillFields:
             if field not in person_data:
                 if all_data[field] == 'birth_date':
                     continue
-                all_data[field] = input(f'Podaj {field}\n')
+                elif field == 'doc_date':
+                    all_data['doc_date'] = FillFields.date
+                elif field == 'doc_time':
+                    all_data['doc_time'] = FillFields.hour_minute
+                else:
+                    all_data[field] = input(f'Podaj {field}\n')
 
         # set input into all needed data dictionary
         for k, v in person.items():
