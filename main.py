@@ -2,31 +2,33 @@ from FillFields import FillFields
 from FieldInput import FieldInput
 from CoordinatesDB import fields_db
 from MergePDFs import MergePDFs
-
 from FillForm import FillForm
 
+from colorama import init as colorama_init
+from colorama import Fore
+from colorama import Style
+
+# colores text in terminal
+colorama_init()
+
 # chosen forms from menu
-chosen_forms = FieldInput.chosen_forms
+collected_data = FillFields().fill_fields()
 
 # collected data in chosen forms
-collected_data = FillFields().fill_fields()
+chosen_forms = FieldInput.chosen_forms
 
 try:
     # fill forms
     for form in chosen_forms:
         FillForm(f'{form}', fields_db, collected_data).set_form_positions()
 except KeyError as ke:
-    print(f'BŁĄD: W slowniku koordynatow masz {ke} czego nie wpisales w liście formsDB')
+    print(f'{Fore.RED}BŁĄD!{Style.RESET_ALL}:W słowniku koordynatów masz {ke} czego nie wpisałeś w liście formsDB')
+except TypeError:
+    print("Do widzenia! - w mainie")
 
+# merge chosen_forms into one pdf file
 MergePDFs(chosen_forms)
+print("Utworzono plik w katalogu głównym - otwórz i drukuj dwustronnie! :) ")
 
 print(collected_data)
 print(chosen_forms)
-
-# import datetime
-#
-# x = datetime.datetime.now()
-#     date = time.strftime("%d.%m.%Y"+' .r')
-# print(x.strftime("%d.%m.%Y"))
-# print(x.strftime("%H:%M"))
-# ZWRACA STRINGI WIEC MOZNA SLICE'OWAC ;)

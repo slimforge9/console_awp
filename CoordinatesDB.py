@@ -17,7 +17,7 @@ fields_db = {'detain':
                        'supervisor': [130, 375],
                        'doc_city': [350, 140],
                        'doc_date': [350, 140],  # original 445, 140
-                       'doc_time': [445, 140]}},  # original 515, 140
+                       'doc_time': [350, 140]}},  # original 515, 140
              '79':
                  {'page0':
                         {'doc_city': [330, 43],
@@ -51,7 +51,8 @@ fields_db = {'detain':
                      'officer_id': [54, 80],
                      'act_time_date': [255, 245],
                      'act_place': [255, 265],
-                     'act_description': [255, 283]
+                     'act_description': [255, 283],
+                     'offense_base': [150, 335]
 
                  }
              }

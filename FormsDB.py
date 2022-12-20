@@ -11,7 +11,7 @@ class FormsDB:
                                 'mom_name', 'mom_family', 'address', 'job', 'ID', 'p_no', '79_basis'
                                 ],
                          'rej': ['officer_name', 'doc_city', 'doc_date', 'officer_unit', 'officer_id', 'act_time_date',
-                                 'act_place', 'act_description']
+                                 'act_place', 'act_description', 'offense_base']
                          }
 
     def get_fields(self):

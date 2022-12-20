@@ -14,8 +14,8 @@ pdf_style = ''
 pdf.add_font('DejaVu', fname='DejaVuSansCondensed.ttf')
 pdf.set_font('DejaVu', size=11)
 
-pdf.set_xy(54, 10)
-pdf.cell(50, 15, txt='sierż. szt. Bartłomiej Krupiński', border=0)
+pdf.set_xy(150, 335)
+pdf.cell(50, 15, txt='119§1 kw', border=0)
 pdf.set_xy(255, 283)
 pdf.multi_cell(280, 10, txt='Gliwice', border=1)
 pdf.output(overlay_pdf_file_name)
@@ -34,3 +34,19 @@ template_page.mergePage(overlay_pdf.getPage(0))
 output_pdf = PdfFileWriter()
 output_pdf.addPage(template_page)
 output_pdf.write(open(result_pdf_file_name, "wb"))
+
+
+
+# # creates 2 pages form if there's 1 page form
+# overlay_pdf_file_name = 'temp/overlay_PDF.pdf'
+# pdf_template_file_name = 'forms/warrant.pdf'
+# result_pdf_file_name = 'output/2_pages_war.pdf'
+# pdf_pusty = PdfFileReader(open('forms/blank.pdf', 'rb'))
+# pusty = pdf_pusty.getPage(0)
+# pdf_79 = PdfFileReader(open('forms/warrant.pdf', 'rb'))
+# siedemdziewiec = pdf_79.getPage(0)
+# pdf_template = PdfFileWriter(open(pdf_template_file_name, 'rb'))
+# pdf_template.addPage(siedemdziewiec)
+# pdf_template.addPage(pusty)
+# pdf_template.write(open(result_pdf_file_name, "wb"))
+

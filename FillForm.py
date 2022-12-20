@@ -6,7 +6,7 @@ class FillForm:
 
     def __init__(self, form_name, coord_db, collected_data):
 
-        self.line = None
+        self.line = None  # container for generator result
         self.form_name = form_name
         self.coord_db = coord_db
         self.collected_data = collected_data
@@ -16,7 +16,7 @@ class FillForm:
 
         # prepare PDF file
         self.pdf = FPDF(format='letter', unit='pt')
-        self.pdf.add_font('DejaVu', fname='fonts/DejaVuSansCondensed.ttf')
+        self.pdf.add_font('DejaVu', fname='fonts/DejaVuSansCondensed.ttf')  # UTF-8 font - accepts polish signs
         self.pdf.set_font('DejaVu', size=11)
 
     def num_pages(self):
@@ -81,6 +81,11 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key[0:-1]], border=0)
 
+            # add blank page to manage two-side print in real life printer (in forms that have only one page)
+            if self.form_name == '79':
+                self.pdf.add_page()
+            if self.form_name == 'warrant':
+                self.pdf.add_page()
 
         # save to file with all pages
         self.pdf.output(self.overlay_pdf_file_name)
