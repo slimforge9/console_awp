@@ -42,9 +42,9 @@ fields_db = {'detain':
                          'p_no': [380, 454],
                          '79_basis': [55, 565]
                         }},
-             'rej': {
-                 'page0': {
-                     'officer_name': [54, 10],
+             'rej':
+                 {'page0':
+                    {'officer_name': [54, 10],
                      'doc_city': [370, 10],
                      'doc_date': [370, 10],
                      'officer_unit': [54, 43],
@@ -52,9 +52,33 @@ fields_db = {'detain':
                      'act_time_date': [255, 245],
                      'act_place': [255, 265],
                      'act_description': [255, 283],
-                     'offense_base': [150, 335]
+                     'offense_base': [150, 335],
+                     'qual': [320, 335],
+                     'item_value': [227, 358],
+                     'act_time_date2': [255, 384],
+                     'how_notify': [255, 402],
+                     'act_time_date3': [255, 430],
+                     'rej_type': [255, 456],
+                     'end_type': [255, 474],
+                     # Person
+                     'name': [255, 512],
+                     'surname': [315, 512],
+                     'dad_name': [255, 534],
+                     'mom_name': [315, 534],
+                     'mom_family': [375, 534],
+                     'birth_date': [255, 557],
+                     'birth_place': [329, 557],
+                     'ID': [255, 575],
+                     'address': [255, 593],
+                     'p_no': [255, 611],
+                     'nationality': [255, 629],
+                     'sex': [315, 629],
+                     'job': [255, 655],
+                     'retained_item': [255, 681],
+                     'spb': [255, 704]},
+                 'page1':
+                     {'victim': [255, 263]}
+                  }}
 
-                 }
-             }
 
-             }
+

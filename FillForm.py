@@ -20,22 +20,20 @@ class FillForm:
         self.pdf.set_font('DejaVu', size=11)
 
     def num_pages(self):
-        return len(self.coord_db[self.form_name].keys())
+        return len(list(self.coord_db[self.form_name].keys()))
 
-    def generate_form_positions(self):
+    def generate_form_positions(self, page):
         # CREATES GENERATOR
-        # iteration trough pages in form
-        for i in range(self.num_pages()):
-            # iteration trough items in pages form -> returns key and value
-            for k, v in self.coord_db[self.form_name][f'page{i}'].items():
-                yield k, v
+        # iteration trough pages in form\
+        for k, v in self.coord_db[self.form_name][f'page{page}'].items():
+            yield k, v
 
     def set_form_positions(self):
         # iterate trough pages
         for pages in range(self.num_pages()):
 
             # create a generator for each field position and resets it after every page
-            self.line = iter(self.generate_form_positions())
+            self.line = iter(self.generate_form_positions(pages))
             self.pdf.add_page()
 
             # this loop place values in right coords, there's alot of "elif" because of customization of every form
@@ -47,7 +45,6 @@ class FillForm:
 
                 except StopIteration:
                     break
-
                 if key == '79_basis':
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(490, 10, txt=self.collected_data[key], border=0)
@@ -65,14 +62,18 @@ class FillForm:
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
 
                 elif self.form_name == 'warrant' and key == 'doc_time':
-                    self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_date'])*7)), value_xy[1])
+                    self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_date'])*7+(len(self.collected_data['doc_city'])*7))), value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
 
                 elif self.form_name == 'rej' and key == 'doc_date':
                     self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_city'])*7)), value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
 
-                elif key[-1] != '2':
+                elif self.form_name == 'rej' and key == 'victim':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(280, 10, txt=self.collected_data[key], border=0)
+
+                elif key[-1] != '2' or key[-1] != '3':
                     # sets x,y with text from dictionary by key
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
@@ -92,15 +93,18 @@ class FillForm:
 
         # rest
         pdf_template = PdfFileReader(open(self.pdf_template_file_name, 'rb'))
-        # Get the first page from the template
-        template_page = pdf_template.getPage(0)
+
         # Open your overlay PDF that was created earlier
         overlay_pdf = PdfFileReader(open(self.overlay_pdf_file_name, 'rb'))
-        # Merge the overlay page onto the template page
-        template_page.mergePage(overlay_pdf.getPage(0))
+
         # Write the result to a new PDF file
         output_pdf = PdfFileWriter()
-        output_pdf.addPage(template_page)
+
+        for i in range(self.num_pages()):
+            # Get the first page from the template
+            template_page = pdf_template.getPage(i)
+            # Merge the overlay page onto the template page
+            template_page.mergePage(overlay_pdf.getPage(i))
+            output_pdf.addPage(template_page)
+
         output_pdf.write(open(self.result_pdf_file_name, "wb"))
-
-

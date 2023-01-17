@@ -1,7 +1,6 @@
 from fpdf import FPDF
 from PyPDF2 import PdfFileWriter, PdfFileReader
 
-
 overlay_pdf_file_name = 'temp/overlay_PDF.pdf'
 pdf_template_file_name = 'forms/rej.pdf'
 result_pdf_file_name = 'output/final_PDF.pdf'
@@ -14,9 +13,11 @@ pdf_style = ''
 pdf.add_font('DejaVu', fname='DejaVuSansCondensed.ttf')
 pdf.set_font('DejaVu', size=11)
 
-pdf.set_xy(150, 335)
-pdf.cell(50, 15, txt='119§1 kw', border=0)
-pdf.set_xy(255, 283)
+pdf.set_xy(255, 704)
+pdf.cell(50, 15, txt='Bartłomiej', border=0)
+pdf.set_xy(255, 681)
+pdf.cell(50, 15, txt='Krupiński', border=0)
+pdf.set_xy(255, 263)
 pdf.multi_cell(280, 10, txt='Gliwice', border=1)
 pdf.output(overlay_pdf_file_name)
 
@@ -25,7 +26,7 @@ pdf.output(overlay_pdf_file_name)
 # Open your template PDF
 pdf_template = PdfFileReader(open(pdf_template_file_name, 'rb'))
 # Get the first page from the template
-template_page = pdf_template.getPage(0)
+template_page = pdf_template.getPage(1)
 # Open your overlay PDF that was created earlier
 overlay_pdf = PdfFileReader(open(overlay_pdf_file_name, 'rb'))
 # Merge the overlay page onto the template page
@@ -49,4 +50,14 @@ output_pdf.write(open(result_pdf_file_name, "wb"))
 # pdf_template.addPage(siedemdziewiec)
 # pdf_template.addPage(pusty)
 # pdf_template.write(open(result_pdf_file_name, "wb"))
+
+
+# from PIL import Image
+#
+# basewidth = 300
+# img = Image.open('somepic.jpg')
+# wpercent = (basewidth/float(img.size[0]))
+# hsize = int((float(img.size[1])*float(wpercent)))
+# img = img.resize((basewidth,hsize), Image.Resampling.LANCZOS)
+# img.save('somepic.jpg')
 
