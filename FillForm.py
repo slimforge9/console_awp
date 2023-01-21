@@ -19,6 +19,16 @@ class FillForm:
         self.pdf.add_font('DejaVu', fname='fonts/DejaVuSansCondensed.ttf')  # UTF-8 font - accepts polish signs
         self.pdf.set_font('DejaVu', size=11)
 
+    ############ TRANSFORM p_no with spaces to fill detain form
+    def transform_p(self, p_no):
+        add = " "
+        pesel = f"{p_no[0] + add + add + p_no[1] + add + add + add}"
+        pesel += f"{p_no[2] + add + add + p_no[3] + add + add + p_no[4]}"
+        pesel += f"{add + add + p_no[5] + add + add + p_no[6] + add + add}"
+        pesel += f"{p_no[7] + add + add + add + p_no[8] + add + add + p_no[9]}"
+        pesel += f"{add + add + p_no[10]}"
+        return pesel
+
     def num_pages(self):
         return len(list(self.coord_db[self.form_name].keys()))
 
@@ -42,12 +52,185 @@ class FillForm:
                 try:
                     # gets key, value_xy from generator
                     key, value_xy = next(self.line)
+                    print(key)
 
                 except StopIteration:
                     break
+
                 if key == '79_basis':
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(490, 10, txt=self.collected_data[key], border=0)
+
+                # DETAIN FORM
+                # detain_hour
+                elif self.form_name == 'detain' and key == 'hd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_time'][0], border=0)
+
+                elif self.form_name == 'detain' and key == 'hj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_time'][1], border=0)
+
+                elif self.form_name == 'detain' and key == 'hmd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_time'][3], border=0)
+
+                elif self.form_name == 'detain' and key == 'hmj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_time'][4], border=0)
+
+                #detain_date
+                # day
+                elif self.form_name == 'detain' and key == 'ddd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][0], border=0)
+
+                elif self.form_name == 'detain' and key == 'ddj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][1], border=0)
+
+                # month
+                elif self.form_name == 'detain' and key == 'dmd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][3], border=0)
+
+                elif self.form_name == 'detain' and key == 'dmj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][4], border=0)
+
+                # year
+                elif self.form_name == 'detain' and key == 'dyt':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][6], border=0)
+
+                elif self.form_name == 'detain' and key == 'dys':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][7], border=0)
+
+                elif self.form_name == 'detain' and key == 'dyd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][8], border=0)
+
+                elif self.form_name == 'detain' and key == 'dyj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][9], border=0)
+
+#####################
+                # doc_time
+                elif self.form_name == 'detain' and key == 'doc_hd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_time'][0], border=0)
+
+                elif self.form_name == 'detain' and key == 'doc_hj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_time'][1], border=0)
+
+                elif self.form_name == 'detain' and key == 'doc_hmd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_time'][3], border=0)
+
+                elif self.form_name == 'detain' and key == 'doc_hmj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_time'][4], border=0)
+
+                # doc_date
+                # day
+                elif self.form_name == 'detain' and key == 'doc_ddd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][0], border=0)
+
+                elif self.form_name == 'detain' and key == 'doc_ddj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][1], border=0)
+
+                # month
+                elif self.form_name == 'detain' and key == 'doc_dmd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][3], border=0)
+
+                elif self.form_name == 'detain' and key == 'doc_dmj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][4], border=0)
+
+                # year
+                elif self.form_name == 'detain' and key == 'doc_dyt':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][6], border=0)
+
+                elif self.form_name == 'detain' and key == 'doc_dys':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][7], border=0)
+
+                elif self.form_name == 'detain' and key == 'doc_dyd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][8], border=0)
+
+                elif self.form_name == 'detain' and key == 'doc_dyj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][9], border=0)
+
+                elif self.form_name == 'detain' and key == 'detain_basis':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(483, 12, txt=' '*33 + self.collected_data[key], border=0)
+
+                elif self.form_name == 'detain' and key == 'rights':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(483, 12, txt=' '*11 + self.collected_data[key], border=0)
+
+                # end_time_hour
+                elif self.form_name == 'detain' and key == 'ehd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_time'][0], border=0)
+
+                elif self.form_name == 'detain' and key == 'ehj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_time'][1], border=0)
+
+                elif self.form_name == 'detain' and key == 'emd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_time'][3], border=0)
+
+                elif self.form_name == 'detain' and key == 'emj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_time'][4], border=0)
+
+                # end_doc_date
+                # day
+                elif self.form_name == 'detain' and key == 'eddd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][0], border=0)
+
+                elif self.form_name == 'detain' and key == 'eddj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][1], border=0)
+
+                # month
+                elif self.form_name == 'detain' and key == 'edmd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][3], border=0)
+
+                elif self.form_name == 'detain' and key == 'edmj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][4], border=0)
+
+                # year
+                elif self.form_name == 'detain' and key == 'edyt':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][6], border=0)
+
+                elif self.form_name == 'detain' and key == 'edys':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][7], border=0)
+
+                elif self.form_name == 'detain' and key == 'edyd':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][8], border=0)
+
+                elif self.form_name == 'detain' and key == 'edyj':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(490, 10, txt=self.collected_data['doc_date'][9], border=0)
+
+                ######################
 
                 elif key == 'act_description':
                     self.pdf.set_xy(value_xy[0], value_xy[1])
@@ -73,7 +256,15 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(280, 10, txt=self.collected_data[key], border=0)
 
-                elif key[-1] != '2' or key[-1] != '3':
+                elif self.form_name == 'rej' and key == 'subject':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.multi_cell(280, 10, txt=self.collected_data[key], border=0)
+
+                elif self.form_name == 'detain' and key == 'p_no':
+                    self.pdf.set_xy(value_xy[0], value_xy[1])
+                    self.pdf.cell(50, 15, txt=self.transform_p(self.collected_data[key]), border=0)
+
+                elif key[-1] != '2' and key[-1] != '3':
                     # sets x,y with text from dictionary by key
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)

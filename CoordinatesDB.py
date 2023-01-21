@@ -1,11 +1,52 @@
 # database of fields coordinates to fill in chosen forms
 fields_db = {'detain':
                  {'page0':
-                         {'name': [1, 2],
-                          'surname': [10, 10]},
+                         {'name': [70, 79],
+                          'surname': [135, 79],
+                          # detain_time
+                          'hd': [359, 64], 'hj': [373, 64], 'hmd': [386, 64], 'hmj': [400, 64],
+                          ## detain_date
+                          # day
+                          'ddd': [426, 64], 'ddj': [438, 64], 'dmd': [453, 64], 'dmj': [467, 64],
+                          # year
+                          'dyt': [481, 64], 'dys': [495, 64], 'dyd': [508, 64], 'dyj': [522, 64],
+                          'other_basis': [100, 178],
+                          'detain_place': [85, 212],
+                          'officer_name': [85, 235],
+                          'officer_unit': [312, 235],
+                          'doc_place': [85, 269],
+                          # doc_time
+                          'doc_hd': [362, 265], 'doc_hj': [377, 265], 'doc_hmd': [391, 265], 'doc_hmj': [404, 265],
+                          ## doc_date
+                          # day, month
+                          'doc_ddd': [430, 265], 'doc_ddj': [444, 265], 'doc_dmd': [458, 265], 'doc_dmj': [471, 265],
+                          # year
+                          'doc_dyt': [485, 265], 'doc_dys': [499, 265], 'doc_dyd': [512, 265], 'doc_dyj': [525, 265],
+                          'others': [208, 293],
+                          'name2': [144, 332],
+                          'surname2': [205, 332],
+                          'family_name': [365, 332],
+                          'dad_name': [144, 358],
+                          'mom_name': [205, 358],
+                          'mom_family': [365, 358],
+                          'p_no': [104, 388],
+                          'birth_place': [160, 417],
+                          'address': [170, 465],
+                          'job': [98, 490],
+                          'ID': [300, 516],
+                          'detain_basis': [64, 583]},
                   'page1':
-                         {'doc_time': [20, 20],
-                          'doc_date': [30, 40]}},
+                         {'rights': [44, 10],
+                          'health': [44, 60],
+                          # end_hour
+                          'ehd': [154, 242], 'ehj': [167, 242], 'emd': [181, 242], 'emj': [193, 242],
+                          # end date day/month
+                          'eddd': [221, 242], 'eddj': [235, 242], 'edmd': [248, 242], 'edmj':[261, 242],
+                          # end_date year
+                          'edyt': [275, 242], 'edys': [288, 242], 'edyd': [302, 242], 'edyj': [315, 242],
+                          'name3': [230, 472],
+                          'surname3': [270, 472]
+                          }},
              'warrant':
                  {'page0':
                       {'name': [130, 280],
@@ -76,9 +117,12 @@ fields_db = {'detain':
                      'job': [255, 655],
                      'retained_item': [255, 681],
                      'spb': [255, 704]},
-                 'page1':
-                     {'victim': [255, 263]}
-                  }}
+                  'page1':
+                     {'victim': [255, 263],
+                      'subject': [255, 314]}
+                  },
+
+             }
 
 
 

@@ -18,6 +18,7 @@ class GetData:
         # crate dictionary with all needed data
         all_data = dict()
         for data in fields_list:
+            print(data)
             all_data[data] = None
 
         # list of data that we collected
