@@ -55,7 +55,7 @@ fields_db = {'detain':
                        'p_no': [360, 315],
                        'birth_date': [75, 315],
                        'birth_place': [200, 315],
-                       'supervisor': [130, 375],
+                       'supervisor': [130, 374],
                        'doc_city': [350, 140],
                        'doc_date': [350, 140],  # original 445, 140
                        'doc_time': [350, 140]}},  # original 515, 140

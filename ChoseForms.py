@@ -15,7 +15,7 @@ class ChoseForms:
         self.translator = {'detain': ' - Protokół zatrzymania osoby',
                            'warrant': ' - Nakaz przyjęcia do PDOZ',
                            '79': ' - Notatka z doprowadzenia na podstawie art 79kkw',
-                           'rej': ' - Notatka rejestracyjna do kradzieży do wykroczeń KSIP'}
+                           'rej': ' - Notatka rejestracyjna do kradzieży w KSIP'}
 
     def chose_forms(self):
         # Add or remove form to fill

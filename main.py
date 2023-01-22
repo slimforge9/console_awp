@@ -32,5 +32,3 @@ except TypeError:
 MergePDFs(chosen_forms)
 print("Utworzono plik w katalogu głównym - otwórz i drukuj dwustronnie! :) ")
 
-print(collected_data)
-print(chosen_forms)

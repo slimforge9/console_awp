@@ -52,7 +52,6 @@ class FillForm:
                 try:
                     # gets key, value_xy from generator
                     key, value_xy = next(self.line)
-                    print(key)
 
                 except StopIteration:
                     break
@@ -171,7 +170,7 @@ class FillForm:
 
                 elif self.form_name == 'detain' and key == 'detain_basis':
                     self.pdf.set_xy(value_xy[0], value_xy[1])
-                    self.pdf.multi_cell(483, 12, txt=' '*33 + self.collected_data[key], border=0)
+                    self.pdf.multi_cell(483, 12, txt=' '*35 + self.collected_data[key], border=0)
 
                 elif self.form_name == 'detain' and key == 'rights':
                     self.pdf.set_xy(value_xy[0], value_xy[1])

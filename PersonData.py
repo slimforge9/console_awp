@@ -1,10 +1,16 @@
+from colorama import init as colorama_init
+from colorama import Fore
+from colorama import Style
+
+# colores text in terminal
+colorama_init()
 class PersonData:
 
     def __init__(self):
-        self.name = input('Imię osoby której dotyczy protokół\n')
-        self.surname = input('Nazwisko\n')
-        self.p_no = input('PESEL\n')
-        self.address = input('Miejsce zamieszkania\n')
+        self.name = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} Imię osoby której dotyczy protokół: ')
+        self.surname = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} Nazwisko: ')
+        self.p_no = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} PESEL: ')
+        self.address = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} Miejsce zamieszkania {Fore.CYAN}(np: Warszawa, ul. Kręta 6/2): {Style.RESET_ALL}')
 
         def convert_birth_from_p_no(b_date):
             if b_date[2] == '2' or b_date[2] == '3':

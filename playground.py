@@ -79,3 +79,8 @@ output_pdf.write(open(result_pdf_file_name, "wb"))
 
 
 
+# Założyć profil w którym:
+# stopien, imie nazwisko policjanta
+# Miejscowosc dokumentu
+# nr legitymacji sluzbowej
+# kierownik jednostki

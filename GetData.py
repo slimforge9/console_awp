@@ -1,10 +1,15 @@
 from FieldInput import FieldInput
 from PersonData import PersonData
+from Translator import Translator
 
 
 class GetData:
     # takes person data and fills the fields in every chosen form + asks for data that wasn't input before
+    def __init__(self):
+        self.translator = Translator().translator
 
+    def print_text(self, key):
+        print(self.translator[key])
     def fill_fields(self):
         # list of fields needed to be filled
         fields_list = FieldInput().give_list()
@@ -27,7 +32,7 @@ class GetData:
         # input data which wasn't input
         for field in fields_list:
             if field not in person_data:
-                all_data[field] = input(f'Podaj {field}\n')
+                all_data[field] = input(f'{self.print_text(field)}\n')
 
         # set input into all needed data dictionary
         for k, v in person.items():

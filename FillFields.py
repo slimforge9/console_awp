@@ -1,5 +1,6 @@
 from FieldInput import FieldInput
 from PersonData import PersonData
+from Translator import Translator
 
 import datetime
 
@@ -21,6 +22,10 @@ class FillFields:
 
         # chosen forms from Field Input -> menu()
         # chosen_forms = FieldInput.chosen_forms
+        translator = Translator().translator
+
+        def print_text(key):
+            return translator[key]
 
         # crate dictionary with all needed data
         all_data = dict()
@@ -43,7 +48,7 @@ class FillFields:
                 elif field == 'doc_time':
                     all_data['doc_time'] = FillFields.hour_minute
                 else:
-                    all_data[field] = input(f'Podaj {field}\n')
+                    all_data[field] = input(print_text(field)+' ')
         print("Czekaj...\n")
 
         # set input into all needed data dictionary
