@@ -29,15 +29,6 @@ class FillForm:
         pesel += f"{add + add + p_no[10]}"
         return pesel
 
-    # def scale_pic(name, surname):
-    #     filepath = f'pliki/images/{name} {surname}.jpg'
-    #     basewidth = 340
-    #     img = Image.open(filepath)
-    #     wpercent = (basewidth / float(img.size[0]))
-    #     hsize = int((float(img.size[1]) * float(wpercent)))
-    #     img = img.resize((basewidth, hsize), Image.Resampling.LANCZOS)
-    #     img.save('pliki/images/scaled/scaled.jpg')
-
     def num_pages(self):
         return len(list(self.coord_db[self.form_name].keys()))
 
@@ -64,10 +55,6 @@ class FillForm:
 
                 except StopIteration:
                     break
-
-                # if key == '79_basis':
-                #     self.pdf.set_xy(value_xy[0], value_xy[1])
-                #     self.pdf.multi_cell(490, 10, txt=self.collected_data[key], border=0)
 
                 # DETAIN FORM
                 # detain_hour
@@ -123,7 +110,6 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][9], border=0)
 
-#####################
                 # doc_time
                 elif self.form_name == 'detain' and key == 'doc_hd':
                     self.pdf.set_xy(value_xy[0], value_xy[1])
@@ -289,7 +275,6 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key[0:-1]], border=0)
 
-
             # add blank page to manage two-side print in real life printer (in forms that have only one page)
             # if self.form_name == '79':
             #     self.pdf.add_page()
@@ -297,9 +282,6 @@ class FillForm:
                 self.pdf.add_page()
             if self.form_name == 'warrant':
                 self.pdf.add_page()
-
-
-
 
         # save to file with all pages
         self.pdf.output(self.overlay_pdf_file_name)

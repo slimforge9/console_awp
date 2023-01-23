@@ -20,8 +20,7 @@ class FillFields:
         # collected person data
         person = PersonData().get_data()
 
-        # chosen forms from Field Input -> menu()
-        # chosen_forms = FieldInput.chosen_forms
+        # translator for key : terminal_text
         translator = Translator().translator
 
         # returns text bounded to a key

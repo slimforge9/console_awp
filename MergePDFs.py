@@ -1,5 +1,6 @@
 from PyPDF2 import PdfFileWriter, PdfFileReader
 
+
 class MergePDFs:
 
     def __init__(self, forms_list):
@@ -25,4 +26,3 @@ class MergePDFs:
                 repeat()
 
         output_pdf.write(open(f'pliki/scalone.pdf', "wb"))
-

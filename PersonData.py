@@ -4,6 +4,8 @@ from colorama import Style
 
 # colores text in terminal
 colorama_init()
+
+
 class PersonData:
 
     def __init__(self):
@@ -22,8 +24,6 @@ class PersonData:
                 break
             else:
                 print(f'{Fore.RED}PESEL musi mieć 11 cyfr{Style.RESET_ALL}')
-        # self.p_no = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} PESEL: ')
-
 
         self.address = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} Miejsce zamieszkania {Fore.CYAN}(np: Warszawa, ul. Kręta 6/2): {Style.RESET_ALL}')
 

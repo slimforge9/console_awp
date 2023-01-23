@@ -9,10 +9,6 @@ class FormsDB:
                                     'address', 'job', 'ID', 'detain_basis', 'rights', 'health'],
                          'warrant': ['doc_city', 'doc_date', 'doc_time', 'name', 'surname', 'dad_name', 'p_no',
                                      'birth_date', 'birth_place', 'supervisor'],
-                         # '79': ['doc_city', 'doc_date', 'name', 'surname', 'hold_time', 'hold_date',
-                         #        'officer_name', 'officer_unit', 'family_name', 'birth_date', 'birth_place', 'dad_name',
-                         #        'mom_name', 'mom_family', 'address', 'job', 'ID', 'p_no', '79_basis'
-                         #        ],
                          'rej': ['officer_name', 'doc_city', 'doc_date', 'officer_unit', 'officer_id', 'act_time_date',
                                  'act_place', 'act_description', 'offense_base', 'qual', 'item_value',
                                  'how_notify', 'rej_type', 'end_type', 'name', 'surname', 'dad_name',
@@ -43,10 +39,3 @@ class FormsDB:
         self.no_repeat = set(flat_list)
 
         return self.no_repeat
-
-    # def dict_of_fields_list(self):
-    #     #  zmienilem no_repeat na self.no_repeat w funkcji wyzej
-    #     dict_of_fields =  {str(form): form for form in self.no_repeat}
-    #     return dict_of_fields
-
-

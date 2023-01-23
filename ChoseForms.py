@@ -73,7 +73,3 @@ class ChoseForms:
                     f"{Fore.GREEN}\nLista dokumentów, które zostaną sporządzone po wybraniu opcji Dalej:{Style.RESET_ALL}")
                 print(f"{Fore.BLUE} - brak (wybierz cyfrą odpowiedni dokument i naciśnij ENTER){Style.RESET_ALL}")
         return chosen_forms
-
-# print(f'{Fore.RED}BŁĄD!{Style.RESET_ALL})
-
-
