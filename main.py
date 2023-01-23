@@ -30,5 +30,5 @@ except TypeError:
 
 # merge chosen_forms into one pdf file
 MergePDFs(chosen_forms)
-print("Utworzono plik w katalogu głównym - otwórz i drukuj dwustronnie! :) ")
+print("Utworzono /pliki/scalone.pdf - otwórz i drukuj dwustronnie! :) ")
 

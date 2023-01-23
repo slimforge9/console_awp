@@ -9,7 +9,22 @@ class PersonData:
     def __init__(self):
         self.name = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} Imię osoby której dotyczy protokół: ')
         self.surname = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} Nazwisko: ')
-        self.p_no = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} PESEL: ')
+        self.p_no = 0
+
+        # Validate p_no length (must be 11)
+        while True:
+            try:
+                self.p_no = str(input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} PESEL: '))
+            except ValueError:
+                print(f'{Fore.RED}PESEL musi mieć 11 cyfr{Style.RESET_ALL}')
+                continue
+            if len(self.p_no) == 11:
+                break
+            else:
+                print(f'{Fore.RED}PESEL musi mieć 11 cyfr{Style.RESET_ALL}')
+        # self.p_no = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} PESEL: ')
+
+
         self.address = input(f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} Miejsce zamieszkania {Fore.CYAN}(np: Warszawa, ul. Kręta 6/2): {Style.RESET_ALL}')
 
         def convert_birth_from_p_no(b_date):
@@ -25,7 +40,7 @@ class PersonData:
                             'surname': self.surname,
                             'p_no': self.p_no,
                             'address': self.address,
-                            'birth_date': convert_birth_from_p_no(self.p_no)
+                            'birth_date': convert_birth_from_p_no(self.p_no),
                             }
 
     def get_data(self):

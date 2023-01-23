@@ -11,11 +11,13 @@ class ChoseForms:
     # Creates list of forms needed to be created,
 
     def __init__(self):
-        self.forms_list = ['detain', 'warrant', '79', 'rej']
-        self.translator = {'detain': ' - Protokół zatrzymania osoby',
+        self.forms_list = ['detain', 'warrant', 'identity', 'rej']
+        self.translator = {'detain': ' - Protokół zatrzymania osoby (x3)',
                            'warrant': ' - Nakaz przyjęcia do PDOZ',
-                           '79': ' - Notatka z doprowadzenia na podstawie art 79kkw',
-                           'rej': ' - Notatka rejestracyjna do kradzieży w KSIP'}
+                           # '79': ' - Notatka z doprowadzenia na podstawie art 79kkw',
+                           'identity': ' - Stwierdzenie tożsamości',
+                           'rej': ' - Notatka rejestracyjna do kradzieży w KSIP'
+                           }
 
     def chose_forms(self):
         # Add or remove form to fill
@@ -30,7 +32,8 @@ class ChoseForms:
             option = input(f"{Fore.GREEN}\nWybierz dokument do wypełnienia (wpisz cyfrę z Menu i naciśnij ENTER):{Style.RESET_ALL}"
                            f"{Fore.YELLOW}\nJeśli dokument jest na liście, wybierz go ponownie aby usunąć go z listy{Style.RESET_ALL}\n\n"
                            " 1. Protokół zatrzymania osoby\n 2. Nakaz przyjęcia do PDOZ\n "
-                           "3. Notatka z doprowadzenia art 79kkw\n 4. Notatka Rejestracyjna do wykroczeń KSIP\n"
+                           "3. Stwierdzenie tożsamości\n "
+                           "4. Notatka Rejestracyjna do wykroczeń KSIP\n"
                            f"{Fore.RED} 5. Dalej lub zakończ (jeśli brak jest dokumentów na liście)\n{Style.RESET_ALL}"
                            f"{Fore.GREEN}\nWybieram opcję: {Style.RESET_ALL}")
 

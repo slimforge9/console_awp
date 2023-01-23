@@ -6,7 +6,7 @@ class MergePDFs:
         output_pdf = PdfFileWriter()
 
         for form in forms_list:
-            pdf_template = PdfFileReader(open(f'forms/{form}.pdf', 'rb'))
+            pdf_template = PdfFileReader(open(f'pliki/forms/{form}.pdf', 'rb'))
             overlay_pdf = PdfFileReader(open(f'temp/{form}_overlay_PDF.pdf', 'rb'))
 
             def repeat():
@@ -24,5 +24,5 @@ class MergePDFs:
             else:
                 repeat()
 
-        output_pdf.write(open(f'merged.pdf', "wb"))
+        output_pdf.write(open(f'pliki/scalone.pdf', "wb"))
 
