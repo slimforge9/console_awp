@@ -8,6 +8,11 @@ from colorama import init as colorama_init
 from colorama import Fore
 from colorama import Style
 
+#!/usr/bin/env python3
+import os
+
+os.system('mode con: cols=120 lines=40')
+
 # colores text in terminal
 colorama_init()
 
@@ -26,9 +31,11 @@ except KeyError as ke:
     print(f'{Fore.RED}BŁĄD!{Style.RESET_ALL}:W słowniku koordynatów masz {ke} czego nie wpisałeś w liście formsDB')
 except TypeError:
     print("Do widzenia! - w mainie")
+    input("Naciśnij ENTER by zakończyć")
 
 
 # merge chosen_forms into one pdf file
 MergePDFs(chosen_forms)
 print("Utworzono /pliki/scalone.pdf - otwórz i drukuj dwustronnie! :) ")
+input("Naciśnij ENTER by zakończyć")
 

@@ -16,6 +16,7 @@ class FieldInput:
         print(f"[Potw. Tożsamości] {Fore.RED}Dodaj zdjęcie osoby w formacie 'Imię Nazwisko.jpg' w folderze pliki/images.\n"
               f"Nazwa z imieniem i nazwiskiem musi odpowiadać tym samym danym, które wpiszesz jako imię i nazwisko osoby"
               f"\nponiżej: {Style.RESET_ALL}(wielkość liter ma odpowiadać tym wpisanym inaczej będzie błąd)")
+        input("Naciśnij ENTER by kontynuować")
 
     # needed fields list in chosen forms
     form = FormsDB()

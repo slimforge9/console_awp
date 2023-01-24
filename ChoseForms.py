@@ -62,6 +62,7 @@ class ChoseForms:
                     break
                 else:
                     print(f"{Fore.RED}Nie wybrałeś żadnych dokumentów. Do widzenia! :){Style.RESET_ALL}")
+                    input("Naciśnij ENTER by zakończyć")
                     exit()
             print(clear)
             if chosen_forms:

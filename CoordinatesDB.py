@@ -58,7 +58,7 @@ fields_db = {'detain':
                        'birth_place': [200, 315],
                        'supervisor': [130, 374],
                        'doc_city': [350, 140],
-                       'doc_time': [350, 140]}},  # original 515, 140
+                       'doc_time': [415, 140]}},  # original 515, 140
              'rej':
                  {'page0':
                     {'officer_name': [54, 10],

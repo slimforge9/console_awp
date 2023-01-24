@@ -60,9 +60,13 @@ class FillFields:
                         if all_data['health'] == '':
                             all_data['health'] = 'wg oświadczenia zdrowy, nie choruje, nie leczy się psychiatrycznie, ' \
                                                  'odwykowo, neurologicznie'
-                        elif all_data['rights'] == '':
-                            all_data['rights'] = 'swoje prawa zrozumiałem, nie żądam kontaktu z adwokatem i bezpośredniej ' \
-                                                 'z nim rozmowy, nie żądam powiadomienia osoby najbliższej'
+                    if field == 'rights':
+                        if all_data['rights'] == '':
+                            all_data['rights'] = 'swoje prawa zrozumiałem, nie składam zażalenia do prokuratury na ' \
+                                                 'zasadność, legalność i prawidłowość zatrzymania, ' \
+                                                 'nie żądam kontaktu z adwokatem i ' \
+                                                 'bezpośredniej z nim rozmowy, nie żądam powiadomienia ' \
+                                                 'osoby najbliższej'
         print("Czekaj...\n")
 
         # set input into all needed data dictionary

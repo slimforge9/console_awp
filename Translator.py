@@ -12,7 +12,7 @@ class Translator:
         'detain_place': f'{Fore.CYAN}[Protokół Zatrzymania]{Style.RESET_ALL} Miejsce (adres) zatrzymania osoby:',
         # warrant
         'officer_name': f'{Fore.RED}[Policjant]{Style.RESET_ALL} stopień, imię i nazwisko Policjanta dokonującego czynność'
-                        f' {Fore.CYAN}(np: sierż. szt. Adam Nowak): {Style.RESET_ALL}',
+                        f' {Fore.CYAN}(np: sierż. szt. Adam Nowak): \n{Style.RESET_ALL}',
         'officer_unit': f'{Fore.RED}[Policjant]{Style.RESET_ALL} {Fore.CYAN}- nazwa jednostki policji policjanta {Style.RESET_ALL} (format: KP II Wrzoski):',
         'doc_city': f'{Fore.CYAN}[Dokument]{Style.RESET_ALL} Miejscowość protokołu:',
         'dad_name': f'{Fore.CYAN}[Osoba]{Style.RESET_ALL} Imię ojca:',

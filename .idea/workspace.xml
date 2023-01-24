@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd0041c1-1f82-49e1-b62d-35de2f64b202" name="Changes" comment="PROJECT DONE! - Firt Version">
+    <list default="true" id="fd0041c1-1f82-49e1-b62d-35de2f64b202" name="Changes" comment="PROJECT DONE! - deleted unnecessary files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AWP.py" beforeDir="false" afterPath="$PROJECT_DIR$/AWP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChoseForms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChoseForms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoordinatesDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoordinatesDB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CreateFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DejaVuSansCondensed.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FieldInput.py" beforeDir="false" afterPath="$PROJECT_DIR$/FieldInput.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FillFields.py" beforeDir="false" afterPath="$PROJECT_DIR$/FillFields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FillForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/FillForm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FormsDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/FormsDB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergePDFs.py" beforeDir="false" afterPath="$PROJECT_DIR$/MergePDFs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PersonData.py" beforeDir="false" afterPath="$PROJECT_DIR$/PersonData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/AWP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Translator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Translator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/79.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/rej.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/warrant.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/playground.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/79_overlay_PDF.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/overlay_PDF.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/rej_overlay_PDF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674511854803</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="PROJECT DONE! - deleted unnecessary files">
+      <created>1674512658084</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674512658084</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,7 +277,8 @@
     <MESSAGE value="managed filing pages in forms" />
     <MESSAGE value="pos detain form done" />
     <MESSAGE value="PROJECT DONE! - Firt Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="PROJECT DONE! - Firt Version" />
+    <MESSAGE value="PROJECT DONE! - deleted unnecessary files" />
+    <option name="LAST_COMMIT_MESSAGE" value="PROJECT DONE! - deleted unnecessary files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
