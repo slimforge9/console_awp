@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd0041c1-1f82-49e1-b62d-35de2f64b202" name="Changes" comment="PROJECT DONE! - deleted unnecessary files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AWP.py" beforeDir="false" afterPath="$PROJECT_DIR$/AWP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChoseForms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChoseForms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FillForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/FillForm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergePDFs.py" beforeDir="false" afterPath="$PROJECT_DIR$/MergePDFs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" afterDir="false" />
+    <list default="true" id="fd0041c1-1f82-49e1-b62d-35de2f64b202" name="Changes" comment="PROJECT DONE! - fixed bugs, v0.2">
+      <change afterPath="$PROJECT_DIR$/pliki/images/A A.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/images/Michał Miś.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/images/f f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/output/detain.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/output/warrant.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674512658084</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="PROJECT DONE! - fixed bugs">
+      <created>1675176203347</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675176203347</updated>
+    </task>
+    <task id="LOCAL-00013" summary="PROJECT DONE! - fixed bugs, v0.2">
+      <created>1675176473067</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675176473067</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,6 +286,8 @@
     <MESSAGE value="pos detain form done" />
     <MESSAGE value="PROJECT DONE! - Firt Version" />
     <MESSAGE value="PROJECT DONE! - deleted unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="PROJECT DONE! - deleted unnecessary files" />
+    <MESSAGE value="PROJECT DONE! - fixed bugs" />
+    <MESSAGE value="PROJECT DONE! - fixed bugs, v0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="PROJECT DONE! - fixed bugs, v0.2" />
   </component>
 </project>
