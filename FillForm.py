@@ -1,5 +1,5 @@
 from fpdf import FPDF
-from PyPDF2 import PdfFileWriter, PdfFileReader
+from PyPDF2 import PdfWriter, PdfReader
 
 
 class FillForm:
@@ -287,19 +287,19 @@ class FillForm:
         self.pdf.output(self.overlay_pdf_file_name)
 
         # rest
-        pdf_template = PdfFileReader(open(self.pdf_template_file_name, 'rb'))
+        pdf_template = PdfReader(open(self.pdf_template_file_name, 'rb'))
 
         # Open your overlay PDF that was created earlier
-        overlay_pdf = PdfFileReader(open(self.overlay_pdf_file_name, 'rb'))
+        overlay_pdf = PdfReader(open(self.overlay_pdf_file_name, 'rb'))
 
         # Write the result to a new PDF file
-        output_pdf = PdfFileWriter()
+        output_pdf = PdfWriter()
 
         for i in range(self.num_pages()):
             # Get the first page from the template
-            template_page = pdf_template.getPage(i)
+            template_page = pdf_template.pages[i]
             # Merge the overlay page onto the template page
-            template_page.mergePage(overlay_pdf.getPage(i))
-            output_pdf.addPage(template_page)
+            template_page.merge_page(overlay_pdf.pages[i])
+            output_pdf.add_page(template_page)
 
         output_pdf.write(open(self.result_pdf_file_name, "wb"))

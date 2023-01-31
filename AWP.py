@@ -1,3 +1,5 @@
+from past.builtins import raw_input
+
 from FillFields import FillFields
 from FieldInput import FieldInput
 from CoordinatesDB import fields_db
@@ -8,10 +10,19 @@ from colorama import init as colorama_init
 from colorama import Fore
 from colorama import Style
 
+def show_exception_and_exit(exc_type, exc_value, tb):
+    import traceback
+    traceback.print_exception(exc_type, exc_value, tb)
+    raw_input("Press key to exit.")
+    sys.exit(-1)
+
+import sys
+sys.excepthook = show_exception_and_exit
+
 #!/usr/bin/env python3
 import os
 
-os.system('mode con: cols=120 lines=40')
+os.system('mode con: cols=100 lines=40')
 
 # colores text in terminal
 colorama_init()

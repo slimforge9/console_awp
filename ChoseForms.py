@@ -25,7 +25,7 @@ class ChoseForms:
         clear = "\n" * 100
         print(clear)
         print(f"{Fore.GREEN}\nLista dokumentów, które zostaną sporządzone po wybraniu opcji Dalej:{Style.RESET_ALL}")
-        print(f"{Fore.BLUE} - brak (wybierz cyfrą odpowiedni dokument i naciśnij ENTER){Style.RESET_ALL}")
+        print(f" - brak (wybierz cyfrą odpowiedni dokument i naciśnij ENTER)")
 
 
         while True:
@@ -68,9 +68,9 @@ class ChoseForms:
             if chosen_forms:
                 print(f"{Fore.GREEN}Lista dokumentów, które zostaną sporządzone po wybraniu opcji Dalej:{Style.RESET_ALL}")
                 for form in chosen_forms:
-                    print(f"{Fore.BLUE}{self.translator[form]}{Style.RESET_ALL}")
+                    print(f"{self.translator[form]}")
             else:
                 print(
                     f"{Fore.GREEN}\nLista dokumentów, które zostaną sporządzone po wybraniu opcji Dalej:{Style.RESET_ALL}")
-                print(f"{Fore.BLUE} - brak (wybierz cyfrą odpowiedni dokument i naciśnij ENTER){Style.RESET_ALL}")
+                print(f"{Fore.YELLOW} - brak (wybierz cyfrą odpowiedni dokument i naciśnij ENTER){Style.RESET_ALL}")
         return chosen_forms

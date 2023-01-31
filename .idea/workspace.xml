@@ -5,20 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AWP.py" beforeDir="false" afterPath="$PROJECT_DIR$/AWP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChoseForms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChoseForms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoordinatesDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/CoordinatesDB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DejaVuSansCondensed.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FieldInput.py" beforeDir="false" afterPath="$PROJECT_DIR$/FieldInput.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FillFields.py" beforeDir="false" afterPath="$PROJECT_DIR$/FillFields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Translator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Translator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/79.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/rej.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/warrant.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playground.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/79_overlay_PDF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/overlay_PDF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/rej_overlay_PDF.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FillForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/FillForm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MergePDFs.py" beforeDir="false" afterPath="$PROJECT_DIR$/MergePDFs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,12 +47,12 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Python\console_awp\AWP.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AWP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,6 +145,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.AWP" />
+      <item itemvalue="Python.FillForm" />
+      <item itemvalue="Python.main (2)" />
+      <item itemvalue="Python.playground" />
+      <item itemvalue="Python.test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.AWP" />
@@ -279,16 +274,5 @@
     <MESSAGE value="PROJECT DONE! - Firt Version" />
     <MESSAGE value="PROJECT DONE! - deleted unnecessary files" />
     <option name="LAST_COMMIT_MESSAGE" value="PROJECT DONE! - deleted unnecessary files" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/FillForm.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
