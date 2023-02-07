@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fd0041c1-1f82-49e1-b62d-35de2f64b202" name="Changes" comment="PROJECT DONE! - fixed bugs, v0.2">
-      <change afterPath="$PROJECT_DIR$/pliki/images/A A.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pliki/images/Michał Miś.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pliki/images/f f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pliki/output/detain.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pliki/output/warrant.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AWP.py" beforeDir="false" afterPath="$PROJECT_DIR$/AWP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProfileMenu.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProfileMenu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.AWP">
+  <component name="RunManager" selected="Python.ProfileMenu">
     <configuration name="AWP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="console_awp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -46,7 +49,8 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="D:\anaconda3\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Fox\Desktop\console awp\console_awp\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11 (console_awp)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -60,19 +64,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="FillForm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileMenu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="console_awp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Fox\Desktop\console awp\console_awp\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11 (console_awp)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FillForm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ProfileMenu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,18 +151,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.AWP" />
-      <item itemvalue="Python.FillForm" />
+      <item itemvalue="Python.ProfileMenu" />
       <item itemvalue="Python.main (2)" />
       <item itemvalue="Python.playground" />
       <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ProfileMenu" />
         <item itemvalue="Python.AWP" />
         <item itemvalue="Python.playground" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.main (2)" />
-        <item itemvalue="Python.FillForm" />
       </list>
     </recent_temporary>
   </component>

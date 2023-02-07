@@ -25,8 +25,11 @@ class Profile:
             with open(self.filename, "r") as f:
                 self.profile_data = json.load(f)
         except FileNotFoundError:
-            self.collect_data()
             self.save_profile()
+
+    def edit_data(self):
+        self.collect_data()
+        self.save_profile()
 
     def stored_data(self):
         self.load_profile()

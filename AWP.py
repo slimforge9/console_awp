@@ -1,5 +1,3 @@
-from past.builtins import raw_input
-
 from FillFields import FillFields
 from FieldInput import FieldInput
 from CoordinatesDB import fields_db
@@ -9,6 +7,7 @@ from FillForm import FillForm
 from colorama import init as colorama_init
 from colorama import Fore
 from colorama import Style
+
 
 def show_exception_and_exit(exc_type, exc_value, tb):
     import traceback
