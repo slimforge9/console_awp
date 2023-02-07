@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a307afca-f5fd-4990-ab2c-c3ee8872d900" name="Changes" comment="spacing in forms, new '79' form">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FillForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/FillForm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/detain.doc" beforeDir="false" afterPath="$PROJECT_DIR$/forms/detain.doc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/79.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/output/79.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/warrant.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/output/warrant.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/79_overlay_PDF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/temp/79_overlay_PDF.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/overlay_PDF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/temp/overlay_PDF.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/temp/warrant_overlay_PDF.pdf" afterDir="false" />
+    <list default="true" id="fd0041c1-1f82-49e1-b62d-35de2f64b202" name="Changes" comment="PROJECT DONE! - fixed bugs, v0.2">
+      <change afterPath="$PROJECT_DIR$/pliki/images/A A.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/images/Michał Miś.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/images/f f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/output/detain.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pliki/output/warrant.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,102 +26,74 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2IKW7aKHycUWV5lT7zVtEG7S0fk" />
+  <component name="ProjectId" id="2IXBKgZA6lgUwGGVh33i2thOhpF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Fox/Desktop/console awp/console_awp/venv/Lib/site-packages/fpdf&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Fox\Desktop\console awp\console_awp\venv\Lib\site-packages\fpdf" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.Profile">
-    <configuration name="MergePDFs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.AWP">
+    <configuration name="AWP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="console_awp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MergePDFs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Profile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="console_awp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Profile.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="cos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="console_awp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cos.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="console_awp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Fox\anaconda3\python.exe" />
-      <option name="SDK_NAME" value="Python 3.9" />
+      <option name="SDK_HOME" value="D:\anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AWP.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FillForm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="console_awp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FillForm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="console_awp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../AWP_Kivy" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../AWP_Kivy/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,47 +123,145 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="console_awp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.Profile" />
-      <item itemvalue="Python.MergePDFs" />
-      <item itemvalue="Python.cos" />
-      <item itemvalue="Python.main" />
+      <item itemvalue="Python.AWP" />
+      <item itemvalue="Python.FillForm" />
+      <item itemvalue="Python.main (2)" />
       <item itemvalue="Python.playground" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Profile" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.AWP" />
         <item itemvalue="Python.playground" />
-        <item itemvalue="Python.MergePDFs" />
-        <item itemvalue="Python.cos" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.FillForm" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a307afca-f5fd-4990-ab2c-c3ee8872d900" name="Changes" comment="" />
-      <created>1669930589273</created>
+      <changelist id="fd0041c1-1f82-49e1-b62d-35de2f64b202" name="Changes" comment="" />
+      <created>1670317987492</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669930589273</updated>
+      <updated>1670317987492</updated>
     </task>
-    <task id="LOCAL-00001" summary="completed MergePDFs and added it to main.py">
-      <created>1671023348601</created>
+    <task id="LOCAL-00001" summary="added '79' and all coords in 'warrant'">
+      <created>1670962628343</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1671023348601</updated>
+      <updated>1670962628343</updated>
     </task>
-    <task id="LOCAL-00002" summary="spacing in forms, new '79' form">
-      <created>1671168037011</created>
+    <task id="LOCAL-00002" summary="added '79' and all coords in 'warrant'">
+      <created>1670962722766</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1671168037011</updated>
+      <updated>1670962722766</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="managed to place one collected data several times in one form">
+      <created>1670979479500</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670979479500</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update to formsDB, coordDB, etc">
+      <created>1671168164485</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671168164485</updated>
+    </task>
+    <task id="LOCAL-00005" summary="79, warrant coords - DONE, geting birth_date from p_no, date adjusts to doc_place dynamically">
+      <created>1671491665504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671491665504</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added &quot;rej&quot;, managed KeyError exception">
+      <created>1671551016899</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671551016899</updated>
+    </task>
+    <task id="LOCAL-00007" summary="created colored MENU">
+      <created>1671568099180</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671568099180</updated>
+    </task>
+    <task id="LOCAL-00008" summary="managed filing pages in forms">
+      <created>1673974496120</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673974496120</updated>
+    </task>
+    <task id="LOCAL-00009" summary="pos detain form done">
+      <created>1674342504258</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674342504258</updated>
+    </task>
+    <task id="LOCAL-00010" summary="PROJECT DONE! - Firt Version">
+      <created>1674511854803</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674511854803</updated>
+    </task>
+    <task id="LOCAL-00011" summary="PROJECT DONE! - deleted unnecessary files">
+      <created>1674512658084</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674512658084</updated>
+    </task>
+    <task id="LOCAL-00012" summary="PROJECT DONE! - fixed bugs">
+      <created>1675176203347</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675176203347</updated>
+    </task>
+    <task id="LOCAL-00013" summary="PROJECT DONE! - fixed bugs, v0.2">
+      <created>1675176473067</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675176473067</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,8 +276,18 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="completed MergePDFs and added it to main.py" />
-    <MESSAGE value="spacing in forms, new '79' form" />
-    <option name="LAST_COMMIT_MESSAGE" value="spacing in forms, new '79' form" />
+    <MESSAGE value="added '79' and all coords in 'warrant'" />
+    <MESSAGE value="managed to place one collected data several times in one form" />
+    <MESSAGE value="update to formsDB, coordDB, etc" />
+    <MESSAGE value="79, warrant coords - DONE, geting birth_date from p_no, date adjusts to doc_place dynamically" />
+    <MESSAGE value="added &quot;rej&quot;, managed KeyError exception" />
+    <MESSAGE value="created colored MENU" />
+    <MESSAGE value="managed filing pages in forms" />
+    <MESSAGE value="pos detain form done" />
+    <MESSAGE value="PROJECT DONE! - Firt Version" />
+    <MESSAGE value="PROJECT DONE! - deleted unnecessary files" />
+    <MESSAGE value="PROJECT DONE! - fixed bugs" />
+    <MESSAGE value="PROJECT DONE! - fixed bugs, v0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="PROJECT DONE! - fixed bugs, v0.2" />
   </component>
 </project>

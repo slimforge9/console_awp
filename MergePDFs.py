@@ -1,20 +1,21 @@
-from PyPDF2 import PdfFileWriter, PdfFileReader
+from PyPDF2 import PdfWriter, PdfReader
+
 
 class MergePDFs:
 
     def __init__(self, forms_list):
-        output_pdf = PdfFileWriter()
+        output_pdf = PdfWriter()
 
         for form in forms_list:
-            pdf_template = PdfFileReader(open(f'forms/{form}.pdf', 'rb'))
-            overlay_pdf = PdfFileReader(open(f'temp/{form}_overlay_PDF.pdf', 'rb'))
+            pdf_template = PdfReader(open(f'pliki/forms/{form}.pdf', 'rb'))
+            overlay_pdf = PdfReader(open(f'temp/{form}_overlay_PDF.pdf', 'rb'))
 
             def repeat():
-                for i in range(3):
+                for i in range(5):
                     try:
-                        template_page = pdf_template.getPage(i)
-                        template_page.mergePage(overlay_pdf.getPage(i))
-                        output_pdf.addPage(template_page)
+                        template_page = pdf_template.pages[i]
+                        template_page.merge_page(overlay_pdf.pages[i])
+                        output_pdf.add_page(template_page)
                     except IndexError:
                         pass
 
@@ -24,5 +25,4 @@ class MergePDFs:
             else:
                 repeat()
 
-        output_pdf.write(open(f'merged.pdf', "wb"))
-
+        output_pdf.write(open(f'pliki/scalone.pdf', "wb"))

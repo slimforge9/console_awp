@@ -20,10 +20,10 @@ class FillFields:
         # collected person data
         person = PersonData().get_data()
 
-        # chosen forms from Field Input -> menu()
-        # chosen_forms = FieldInput.chosen_forms
+        # translator for key : terminal_text
         translator = Translator().translator
 
+        # returns text bounded to a key
         def print_text(key):
             return translator[key]
 
@@ -47,8 +47,26 @@ class FillFields:
                     all_data['doc_date'] = FillFields.date
                 elif field == 'doc_time':
                     all_data['doc_time'] = FillFields.hour_minute
+
+                # DODALEM GLIWICE JAKO DOMYSLNE MIASTO
+                elif field == 'doc_city':
+                    all_data['doc_city'] = f'Gliwice {FillFields.date}'
+                elif field == 'pic':
+                    continue
+                # ~~~~~~~~~~~~~~~~~~~~~~~~
                 else:
                     all_data[field] = input(print_text(field)+' ')
+                    if field == 'health':
+                        if all_data['health'] == '':
+                            all_data['health'] = 'wg oświadczenia zdrowy, nie choruje, nie leczy się psychiatrycznie, ' \
+                                                 'odwykowo, neurologicznie'
+                    if field == 'rights':
+                        if all_data['rights'] == '':
+                            all_data['rights'] = 'swoje prawa zrozumiałem, nie składam zażalenia do prokuratury na ' \
+                                                 'zasadność, legalność i prawidłowość zatrzymania, ' \
+                                                 'nie żądam kontaktu z adwokatem i ' \
+                                                 'bezpośredniej z nim rozmowy, nie żądam powiadomienia ' \
+                                                 'osoby najbliższej'
         print("Czekaj...\n")
 
         # set input into all needed data dictionary

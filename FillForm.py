@@ -1,5 +1,5 @@
 from fpdf import FPDF
-from PyPDF2 import PdfFileWriter, PdfFileReader
+from PyPDF2 import PdfWriter, PdfReader
 
 
 class FillForm:
@@ -11,15 +11,15 @@ class FillForm:
         self.coord_db = coord_db
         self.collected_data = collected_data
         self.overlay_pdf_file_name = f'temp/{self.form_name}_overlay_PDF.pdf'
-        self.pdf_template_file_name = f'forms/{self.form_name}.pdf'
-        self.result_pdf_file_name = f'output/{self.form_name}.pdf'
+        self.pdf_template_file_name = f'pliki/forms/{self.form_name}.pdf'
+        self.result_pdf_file_name = f'pliki/output/{self.form_name}.pdf'
 
         # prepare PDF file
         self.pdf = FPDF(format='letter', unit='pt')
         self.pdf.add_font('DejaVu', fname='fonts/DejaVuSansCondensed.ttf')  # UTF-8 font - accepts polish signs
         self.pdf.set_font('DejaVu', size=11)
 
-    ############ TRANSFORM p_no with spaces to fill detain form
+    # TRANSFORM p_no with spaces to fill detain form
     def transform_p(self, p_no):
         add = " "
         pesel = f"{p_no[0] + add + add + p_no[1] + add + add + add}"
@@ -56,13 +56,9 @@ class FillForm:
                 except StopIteration:
                     break
 
-                if key == '79_basis':
-                    self.pdf.set_xy(value_xy[0], value_xy[1])
-                    self.pdf.multi_cell(490, 10, txt=self.collected_data[key], border=0)
-
                 # DETAIN FORM
                 # detain_hour
-                elif self.form_name == 'detain' and key == 'hd':
+                if self.form_name == 'detain' and key == 'hd':
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_time'][0], border=0)
 
@@ -78,7 +74,7 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_time'][4], border=0)
 
-                #detain_date
+                # detain_date
                 # day
                 elif self.form_name == 'detain' and key == 'ddd':
                     self.pdf.set_xy(value_xy[0], value_xy[1])
@@ -114,7 +110,6 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.multi_cell(490, 10, txt=self.collected_data['detain_date'][9], border=0)
 
-#####################
                 # doc_time
                 elif self.form_name == 'detain' and key == 'doc_hd':
                     self.pdf.set_xy(value_xy[0], value_xy[1])
@@ -244,7 +239,7 @@ class FillForm:
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
 
                 elif self.form_name == 'warrant' and key == 'doc_time':
-                    self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_date'])*7+(len(self.collected_data['doc_city'])*7))), value_xy[1])
+                    self.pdf.set_xy((value_xy[0]+(len(self.collected_data['doc_city'])*4)), value_xy[1])
                     self.pdf.cell(50, 15, txt=self.collected_data[key], border=0)
 
                 elif self.form_name == 'rej' and key == 'doc_date':
@@ -263,6 +258,14 @@ class FillForm:
                     self.pdf.set_xy(value_xy[0], value_xy[1])
                     self.pdf.cell(50, 15, txt=self.transform_p(self.collected_data[key]), border=0)
 
+                elif self.form_name == 'identity' and key == 'pic':
+                    try:
+                        filepath = f'pliki/images/{self.collected_data["name"]} {self.collected_data["surname"]}.jpg'
+                        with self.pdf.rotation(270):
+                            self.pdf.image(filepath, x=470, y=100, w=200, h=150)
+                    except FileNotFoundError:
+                        print("Nie dodałeś zdjęcia w folderze 'pliki/images/imie nazwisko.jpg")
+
                 elif key[-1] != '2' and key[-1] != '3':
                     # sets x,y with text from dictionary by key
                     self.pdf.set_xy(value_xy[0], value_xy[1])
@@ -273,7 +276,9 @@ class FillForm:
                     self.pdf.cell(50, 15, txt=self.collected_data[key[0:-1]], border=0)
 
             # add blank page to manage two-side print in real life printer (in forms that have only one page)
-            if self.form_name == '79':
+            # if self.form_name == '79':
+            #     self.pdf.add_page()
+            if self.form_name == 'identity':
                 self.pdf.add_page()
             if self.form_name == 'warrant':
                 self.pdf.add_page()
@@ -282,19 +287,19 @@ class FillForm:
         self.pdf.output(self.overlay_pdf_file_name)
 
         # rest
-        pdf_template = PdfFileReader(open(self.pdf_template_file_name, 'rb'))
+        pdf_template = PdfReader(open(self.pdf_template_file_name, 'rb'))
 
         # Open your overlay PDF that was created earlier
-        overlay_pdf = PdfFileReader(open(self.overlay_pdf_file_name, 'rb'))
+        overlay_pdf = PdfReader(open(self.overlay_pdf_file_name, 'rb'))
 
         # Write the result to a new PDF file
-        output_pdf = PdfFileWriter()
+        output_pdf = PdfWriter()
 
         for i in range(self.num_pages()):
             # Get the first page from the template
-            template_page = pdf_template.getPage(i)
+            template_page = pdf_template.pages[i]
             # Merge the overlay page onto the template page
-            template_page.mergePage(overlay_pdf.getPage(i))
-            output_pdf.addPage(template_page)
+            template_page.merge_page(overlay_pdf.pages[i])
+            output_pdf.add_page(template_page)
 
         output_pdf.write(open(self.result_pdf_file_name, "wb"))

@@ -8,7 +8,6 @@ from colorama import Style
 colorama_init()
 
 
-
 class Menu:
 
     @staticmethod
@@ -23,5 +22,5 @@ class Menu:
             return chosen_forms
         else:
             print("Do widzenia!")
+            input("Naciśnij ENTER by zakończyć")
             exit()
-

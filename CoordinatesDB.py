@@ -1,4 +1,5 @@
 # database of fields coordinates to fill in chosen forms
+
 fields_db = {'detain':
                  {'page0':
                          {'name': [70, 79],
@@ -57,37 +58,11 @@ fields_db = {'detain':
                        'birth_place': [200, 315],
                        'supervisor': [130, 374],
                        'doc_city': [350, 140],
-                       'doc_date': [350, 140],  # original 445, 140
-                       'doc_time': [350, 140]}},  # original 515, 140
-             '79':
-                 {'page0':
-                        {'doc_city': [330, 43],
-                         'doc_date': [330, 43], # [425, 43]
-                         'name': [90, 163],
-                         'surname': [160, 163],
-                         'hold_time': [340, 163],
-                         'hold_date': [440, 163],
-                         'officer_name': [70, 228],
-                         'officer_unit': [340, 228],
-                         'name2': [220, 278],
-                         'surname2': [277, 278],
-                         'family_name': [395, 278],
-                         'birth_date': [72, 306],
-                         'birth_place': [162, 306],
-                         'dad_name': [272, 306],
-                         'mom_name': [334, 306],
-                         'mom_family': [410, 306],
-                         'address': [175, 349],
-                         'job': [108, 383],
-                         'ID': [317, 419],
-                         'p_no': [380, 454],
-                         '79_basis': [55, 565]
-                        }},
+                       'doc_time': [415, 140]}},  # original 515, 140
              'rej':
                  {'page0':
                     {'officer_name': [54, 10],
                      'doc_city': [370, 10],
-                     'doc_date': [370, 10],
                      'officer_unit': [54, 43],
                      'officer_id': [54, 80],
                      'act_time_date': [255, 245],
@@ -119,10 +94,27 @@ fields_db = {'detain':
                      'spb': [255, 704]},
                   'page1':
                      {'victim': [255, 263],
-                      'subject': [255, 314]}
-                  },
-
-             }
-
-
-
+                      'subject': [255, 314]}},
+             'identity':{
+                  'page0':
+                     {'doc_city': [398, 15],
+                      'pic': [0,0],
+                      'name': [302, 315],
+                      'surname': [360, 315],
+                      'dad_name': [80, 337],
+                      'mom_name': [150, 337],
+                      'mom_family': [290, 337],
+                      'birth_date': [70, 375],
+                      'birth_place': [180, 375],
+                      'p_no': [350, 375],
+                      'address': [165, 416],
+                      'zip_code': [65, 460],
+                      'woj': [215, 460],
+                      'pow': [330, 460],
+                      'gmina': [450, 460],
+                      'nationality': [145, 509],
+                      'officer_unit': [330, 550],
+                      'case': [120, 591],
+                      'officer_name': [120, 665]
+                         }}
+                 }
