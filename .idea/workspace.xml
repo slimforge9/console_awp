@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fd0041c1-1f82-49e1-b62d-35de2f64b202" name="Changes" comment="PROJECT DONE! - fixed bugs, v0.2">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_02_2023_08_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_02_2023_08_06__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AWP.py" beforeDir="false" afterPath="$PROJECT_DIR$/AWP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProfileMenu.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProfileMenu.py" afterDir="false" />
     </list>
@@ -50,7 +50,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\Fox\Desktop\console awp\console_awp\venv\Scripts\python.exe" />
-      <option name="SDK_NAME" value="Python 3.11 (console_awp)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -71,8 +70,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Fox\Desktop\console awp\console_awp\venv\Scripts\python.exe" />
-      <option name="SDK_NAME" value="Python 3.11 (console_awp)" />
+      <option name="SDK_HOME" value="D:\Python\console_awp\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
